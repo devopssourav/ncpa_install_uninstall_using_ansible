@@ -6,15 +6,13 @@ You will need to edit two files to get this working:
 
 ```yml
   vars:
-    xi_ip: '192.168.1.100'
+    xi_ip: '192.168.1.1'
 ```
 
 2.  Set the XI API Key and the NCPA Token in the encrypted `secrets.yml` file:
 
   1.  Run `ansible-vault edit secrets.yml`
-    * It may ask you for the password three times, this is a known ansible bug
   2.  Enter password `nagiosxi` as this is the example used
-    * Feel free to change this as you see fit
   3.  File will look something like this, update to suit your environment:
 
 ```yml

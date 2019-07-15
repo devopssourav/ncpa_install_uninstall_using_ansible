@@ -1,0 +1,6 @@
+[docker]
+192.168.1.37
+[docker:vars]
+ansible_ssh_user=vagrant
+
+

@@ -1,0 +1,17 @@
+---
+# UnInstall NCPA
+
+- name: uninstall ncpa
+  shell: dpkg -r ncpa
+  when: ansible_os_family == "Debian"
+
+- name: UnInstall NCPA (RedHat & CentOS)
+  yum:
+    name: ncpa
+    state: absent
+  when: ansible_os_family == "RedHat"
+
+
+
+
+

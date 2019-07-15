@@ -1,0 +1,15 @@
+---
+- name: Uninstall NCPA from remote agent
+  hosts: all
+  remote_user: vagrant 
+  become: true
+  become_method: sudo
+
+  vars_files:
+    - 'secrets.yml'
+  vars:
+    xi_ip: '192.168.1.177'
+
+  roles:
+    - role: ncpa_uninstall_linux
+    - role: xi_apply_config
